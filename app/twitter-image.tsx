@@ -4,6 +4,6 @@ export const alt = "HADI AI — Your Daily Care, Made Simple. On iPhone and Andr
 export const size = shareSize;
 export const contentType = "image/png";
 
-export default function Image() {
+export default async function Image() {
   return createShareImage();
 }

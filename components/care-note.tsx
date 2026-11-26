@@ -1,6 +1,6 @@
 export function CareNote() {
   return (
-    <section className="mx-auto grid max-w-xl justify-items-center gap-3.5 px-5 py-16 text-center sm:px-6 sm:py-24">
+    <section className="mx-auto grid w-full max-w-xl justify-items-center gap-3.5 px-4 py-14 text-center sm:px-6 sm:py-24">
       <span className="size-16 rounded-full bg-blue" aria-hidden="true" />
       <p className="text-[17px] leading-snug">
         <strong className="font-semibold text-ink">No ads. No diagnosis.</strong>

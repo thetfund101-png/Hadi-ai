@@ -3,7 +3,7 @@ import { StoreBadges } from "@/components/store-badges";
 
 export function DownloadBand() {
   return (
-    <section id="download" className="scene" aria-labelledby="download-title">
+    <section id="download" className="scene w-full" aria-labelledby="download-title">
       <Mascot className="h-28 w-28 sm:h-40 sm:w-40" />
       <h2 id="download-title" className="hero-title font-display mt-5 max-w-[12ch] sm:mt-6 sm:max-w-[14ch]">
         Get <span className="text-blue">HADI</span> on your phone.

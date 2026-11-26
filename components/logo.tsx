@@ -1,12 +1,27 @@
-export function Logo({ className = "" }: { className?: string }) {
+import Image from "next/image";
+
+export function Logo({ className = "", compact = false }: { className?: string; compact?: boolean }) {
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
-        <rect width="28" height="28" rx="8" fill="#003D90" />
-        <path fill="#F7F8FA" d="M8 7.2h2.5v4.7h5V7.2H18v13.6h-2.5v-6.2h-5v6.2H8V7.2Z" />
-        <circle cx="20.2" cy="8.6" r="2.1" fill="#3294FF" />
-      </svg>
-      <span className="font-display text-[1.35rem] leading-none font-black tracking-[-0.04em] text-ink sm:text-[1.7rem]">
+    <span className={`inline-flex items-center ${compact ? "gap-2" : "gap-2.5"} ${className}`}>
+      <Image
+        src="/logo.jpeg"
+        alt=""
+        width={1024}
+        height={1024}
+        priority={!compact}
+        className={
+          compact
+            ? "size-7 rounded-md"
+            : "size-8 rounded-[10px] shadow-[0_6px_14px_-8px_rgba(0,61,144,0.8)] sm:size-9"
+        }
+      />
+      <span
+        className={
+          compact
+            ? "font-display text-base leading-none font-extrabold tracking-[-0.04em] text-ink"
+            : "font-display text-[1.35rem] leading-none font-black tracking-[-0.04em] text-ink sm:text-[1.7rem]"
+        }
+      >
         HADI
       </span>
     </span>

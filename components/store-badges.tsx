@@ -2,7 +2,7 @@ import { stores } from "@/lib/site";
 
 export function StoreBadges() {
   return (
-    <div className="flex w-full max-w-xs flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:items-center">
+    <div className="flex w-full max-w-xs flex-col items-stretch justify-center gap-3 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center">
       <a href={stores.apple} target="_blank" rel="noopener noreferrer" className="store-pill">
         Download on the App Store
         <AppleMark />

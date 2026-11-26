@@ -8,8 +8,6 @@ export const site = {
 };
 
 export const stores = {
-  apple: "https://apps.apple.com/search?term=HADI%20AI",
+  apple: "https://apps.apple.com/us/app/hadi-ai-dialysis-kidney-care/id6788586801",
   google: "https://play.google.com/store/search?q=HADI%20AI&c=apps",
 };
-
-export type ScreenId = "welcome" | "home" | "meds" | "clinic";

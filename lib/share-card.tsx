@@ -1,8 +1,13 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const shareSize = { width: 1200, height: 630 };
 
-export function createShareImage() {
+export async function createShareImage() {
+  const logo = await readFile(join(process.cwd(), "public/logo.jpeg"));
+  const logoSrc = `data:image/jpeg;base64,${logo.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -19,22 +24,7 @@ export function createShareImage() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <div
-            style={{
-              width: 52,
-              height: 52,
-              borderRadius: 14,
-              background: "#3294FF",
-              color: "#F7F8FA",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: 30,
-              fontWeight: 700,
-            }}
-          >
-            H
-          </div>
+          <img src={logoSrc} alt="" width={64} height={64} style={{ borderRadius: 16 }} />
           <div style={{ display: "flex", fontSize: 28, fontWeight: 800, letterSpacing: -1 }}>HADI</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
